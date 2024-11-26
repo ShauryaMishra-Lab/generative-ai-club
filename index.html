@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Club</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav button {
+            background: #357ABD;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        nav button:hover {
+            background: #285B8E;
+        }
+
+        section {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        footer {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Team grid styling */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .team-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Button link styling */
+        a.button {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a.button:hover {
+            background: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Generative AI Club</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('team')">Meet the Team</button>
+            <button onclick="showSection('signup')">Sign-Up</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2>Welcome to the Generative AI Club</h2>
+        <p>Explore how AI is transforming industries and creating new opportunities.</p>
+        <p>Use the navigation above to learn more about the club, meet the team, or sign up!</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>What is this club for?</h2>
+        <p>
+            Unlock the Future with Generative AI!<br><br>
+            Are you curious about how AI is shaping the world around us? Want to learn the skills that are transforming industries and creating new opportunities? Join us for an exciting journey into the world of Generative AI!
+        </p>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>Learn from Experts: Get insights from seasoned professionals in AI.</li>
+            <li>Hands-On Experience: Work on projects that apply AI to real-world challenges.</li>
+            <li>Build Your Portfolio: Create a showcase of your AI-driven creations.</li>
+            <li>Network with Peers: Connect with a community of like-minded enthusiasts.</li>
+        </ul>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <h3>Shaurya Mishra</h3>
+                <p>President</p>
+            </div>
+            <div class="team-card">
+                <h3>Pranav Jetti</h3>
+                <p>Vice President</p>
+            </div>
+            <div class="team-card">
+                <h3>Adarsh Vytla</h3>
+                <p>Vice President</p>
+            </div>
+            <div class="team-card">
+                <h3>Sarvesh Subbiah</h3>
+                <p>Secretary</p>
+            </div>
+            <div class="team-card">
+                <h3>Arnav Jain</h3>
+                <p>Secretary</p>
+            </div>
+            <div class="team-card">
+                <h3>Samhith Yadamakanti</h3>
+                <p>Event Coordinator</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-Up Section -->
+    <section id="signup">
+        <h2>Sign Up</h2>
+        <p>Click the button below to join the Generative AI Club:</p>
+        <a class="button" href="https://forms.gle/5CoRS94z7ejDV3uP7" target="_blank">Sign Up Now</a>
+    </section>
+
+    <footer>
+        © 2024 Generative AI Club
+    </footer>
+
+    <script>
+        // Function to show the selected section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
